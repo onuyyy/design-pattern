@@ -3,7 +3,12 @@ package adapter;
 /*
     Adapter 패턴은 Wrapper 패턴이라고도 한다. 래퍼는 감싸는 것을 의미하는데,
     무엇인가를 포장해서 다른 용도로 사용할 수 있도록 변환해주는 것이 래퍼이자 어댑터이다.
+    호환되지 않는 인터페이스를 가진 클래스들을 함께 사용할 수 있게 해주는 패턴
+      즉, 기존 클래스를 수정하지 않고 원하는 인터페이스에 맞게 중간에서 연결해주는 역할
 
+    "변경에 유리하게 하려고, 한쪽에 변경이 생겼을 때 다른 쪽을 건드리지 않게 하기 위하여"
+
+    - Adapter 패턴 방법
     1. 클래스에 의한 Adapter 패턴 (상속)
     2. 인스턴스에 이한 Adapter 패턴 (위임)
 
@@ -26,6 +31,7 @@ public class Main {
 
         // 1. 상속 Adapter
         Print p = new PrintBanner("Hello");
+        // Print.getInstance("Hello")로 해야 더 제대로 된 코드이다.
         p.printWeak();
         p.printStrong();
 

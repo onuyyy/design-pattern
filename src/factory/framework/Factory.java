@@ -10,5 +10,6 @@ public abstract class Factory {
 
     protected abstract void registerProduct(Product p);
 
+    // 자식 factory가 어떤 걸 반환할지 결정하도록
     protected abstract Product createProduct(String owner);
 }
